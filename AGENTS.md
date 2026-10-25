@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Map uses maplibre-gl, loaded client-only via React.lazy + ClientOnly, with setWorkerUrl(?url) because Vite pre-bundling breaks its worker.
+- District metrics come from the Supabase view v_district_shortage_analysis (not in generated types; queried via an untyped handle in src/lib/ev-data.ts).
