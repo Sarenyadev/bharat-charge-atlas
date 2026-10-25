@@ -1,5 +1,8 @@
 import { useEffect, useRef } from "react";
-import { Map as MLMap, Marker, Popup, NavigationControl, type GeoJSONSource } from "maplibre-gl";
+import { Map as MLMap, Marker, Popup, NavigationControl, setWorkerUrl, type GeoJSONSource } from "maplibre-gl";
+import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
+
+setWorkerUrl(workerUrl);
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { DistrictRow, StationRow } from "@/lib/ev-data";
 
